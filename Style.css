@@ -1,0 +1,106 @@
+* {
+    box-sizing: border-box;
+  }
+  
+  body {
+    margin: 0;
+    padding: 0;
+    background: #f1f1f1;
+    font-family: 'Segoe UI', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+  }
+  
+  .calculator {
+    background: #4f4c4ce2;
+    padding: 20px;
+    border-radius: 16px;
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.1);
+    width: 320px;
+  }
+  
+  .display {
+    width: 100%;
+    height: 60px;
+    font-size: 28px;
+    text-align: right;
+    padding: 10px 15px;
+    margin-bottom: 20px;
+    border: none;
+    border-radius: 8px;
+    background-color: #f9f9f9;
+    box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.05);
+  }
+  
+  .display:focus {
+    outline: none;
+  }
+  
+  .buttons {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 15px;
+  }
+  
+  /* Base button style */
+  button {
+    padding: 20px;
+    font-size: 18px;
+    border: none;
+    border-radius: 8px;
+    background-color: #e0e0e0;
+    box-shadow: 3px 3px 0px #000000;
+    cursor: pointer;
+    transition: all 0.1s ease;
+  }
+  
+  button:hover {
+    transform: translateY(-2px);
+  }
+  
+  button:active {
+    transform: translateY(2px);
+    box-shadow: inset 2px 2px 0px #000000;
+  }
+  
+  /* Orange AC & DEL buttons */
+  button.ac,
+  button.del {
+    background-color: #ff7a26;
+    color: white;
+    box-shadow: 3px 3px 0px #000000;
+  }
+  
+  button.ac:active,
+  button.del:active {
+    box-shadow: inset 2px 2px 0px #000000;
+  }
+  
+  /* Operator buttons */
+  button.operator {
+    background-color: #ffc94d;
+    box-shadow: 3px 3px 0px #000000;
+  }
+  
+  button.operator:active {
+    box-shadow: inset 2px 2px 0px #000000;
+  }
+  
+  /* Equals button */
+  button.equals {
+    background-color: #04be91;
+    color: white;
+    box-shadow: 3px 3px 0px #000000;
+  }
+  
+  button.equals:active {
+    box-shadow: inset 2px 2px 0px #000000;
+  }
+  
+  /* Zero spans two columns */
+  button.zero {
+    grid-column: span 2;
+  }
+  
